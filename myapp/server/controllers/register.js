@@ -50,13 +50,11 @@ async function saveUser(req, res) {
   try {
       const newUser = new User({ user_id, user_email, user_pw: hashedPassword });
       await newUser.save();
-      console.log('사용자 데이터 저장이 완료되었습니다.');
       res.json({ message: '회원가입이 완료되었습니다.' });
   } catch (error) {
       console.error('데이터 저장 오류:', error);
       res.status(500).json({ error: '서버 오류' });
 
-      console.log(req.body);
       res.json({ message: 'POST 요청이 수신되었습니다.' });
   }
 }
