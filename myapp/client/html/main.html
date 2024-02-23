@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do List</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div class="container" style="text-align: center;">
+        <p class="welcome-message" id="welcome-message"></p>
+        <div class="todo-box">
+            <div class="input-container">
+                <input type="text" placeholder="오늘은 무엇을 할까?" id="taskInput">
+                <input type="button" value="ADD" onclick="addTask()">
+            </div>
+            <div class="task-list" id="taskList">
+            </div>
+        </div>
+    </div>
+    <div style="text-align: right; margin-top: 10px;">
+        <div>
+            <button class="logout-button" id="logout-button">LOGOUT</button>
+            <button class="my-button" id="my-button">MY</button>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
