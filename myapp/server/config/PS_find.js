@@ -25,7 +25,6 @@ app.post('/findPs', async (req, res) => {
         res.status(200).json({ message: '이메일 있음'});
 
         const randomPassword = Math.random().toString(36).slice(-8);
-        console.log(randomPassword);
 
         const hashedPassword = await bcrypt.hash(randomPassword, 10);
 
